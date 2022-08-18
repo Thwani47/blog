@@ -19,7 +19,7 @@ jobs:
           hugo-version: '0.101.0'
       
       - name: Build
-        run:  hugo -D
+        run:  hugo --minify
 
       - name: Print Files
         run: ls -R
