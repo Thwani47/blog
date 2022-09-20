@@ -3,8 +3,7 @@ title = "Using Vite for React Applications"
 tags = [
     "vite",
     "react",
-    "web",
-    "development",
+    "web"
 ]
 date = "2022-09-15"
 toc = true
@@ -16,7 +15,7 @@ CRA was created for React beginners who have a limited understanding of Webpack 
 
 You can find the source code for the examples in this article [here](https://github.com/Thwani47/blog-code/tree/main/vite-react-example)
 ## Table of Contents
-1. [What is vite](#what-is-vite)
+1. [What is Vite](#what-is-vite)
 2. [Creating a React App With Vite](#creating-a-react-app-with-vite)
 3. [Pros and Cons of Vite](#pros-and-cons-of-vite)
 4. [Summary](#summary)
