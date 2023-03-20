@@ -20,7 +20,7 @@ React Query comes with an opinionated way for fetching and updating data. React 
 
 In this article we will be learning how to use React Query to fetch and update server data in a React application using Axios.
 
-The complete source code for this article can be found here: **TODO**
+The complete source code for this article can be found [here](https://github.com/Thwani47/blog-code/tree/main/react-query-crud-example)
 
 # Table of Contents
 - [Creating the project](#creating-the-project)
