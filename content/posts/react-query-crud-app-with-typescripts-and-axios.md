@@ -37,7 +37,7 @@ The complete source code for this article can be found [here](https://github.com
 
 ## Creating the project
 
-We'll be using [Vite](https://thwanisithole.co.za/posts/using-vite-for-react-apps/) for our UI. Run
+We'll be using [Vite](https://thwanisithole.co.za/posts/using-vite-for-react-apps/) for our web app. Run
 ```bash
 $ npm create vite@latest react-query-crud-example
 ```
@@ -53,7 +53,7 @@ The above commands install:
 - formik - a React Form Library.
 - yup - A form data validation library.
 - React Router - a React routing library.
-- JSON Server - a fake RESS API. We'll be using this as the backend server to fetch data from and send data to.
+- JSON Server - a fake REST API. We'll be using this as the backend server to fetch data from and send data to.
 - Tailwind CSS - A CSS framework we'll use to style our components.
 
 Run 
