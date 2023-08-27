@@ -28,6 +28,9 @@ justifyContent = false
 relatedPosts = true
 code_copy_button = true
 
+[markup.goldmark.renderer]
+unsafe = true
+
 [[params.social]]
 name = "twitter"
 url = "https://twitter.com/thwani_sithole"
