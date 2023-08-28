@@ -45,7 +45,10 @@ Let's get started with Semantic Kernel below
 
 ## Getting Started with Semantic Kernel in C#
 
-To get started, you'll need an OpenAI API Key. You can obtain one by either creating an [OpenAI](https://openai.com/api/) account or creating an [Azure OpenAI Service](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quickstart?pivots=programming-language-studio). At the time of writing, access to the Azure OpenAI Service is only available by application. You can fill out your application [here](https://aka.ms/oai/access)
+To get started, you'll need an OpenAI API Key. You can obtain one by either creating an [OpenAI](https://openai.com/api/) account or creating an [Azure OpenAI Service](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quickstart?pivots=programming-language-studio). At the time of writing, access to the Azure OpenAI Service is only available by application. You can fill out your application [here](https://aka.ms/oai/access). 
+
+**Note:
+You'll have to load some credits in order to be able to use the OpenAI models. You can load that on the OpenAI website or use your Azure OpenAI subscription credits.**
 
 We'll build a C# console application that accepts a user's ask and can perform a set of actions. The application should be able to
 - Summarize a piece of text
@@ -69,7 +72,7 @@ $ dotnet add package Microsoft.Extensions.Configuration.UserSecrets
 
 Define an app secret with your API Key using the command
 ```bash
-$ dotnet user-secrets int
+$ dotnet user-secrets init
 $ dotnet user-secrets set "OpenAI:APIKey" "<your-api-key>" #replace <your-api-key> with your Open API Key
 ```
 We first need to create a kernel. We can create a kernel in two ways:
@@ -151,7 +154,11 @@ Its mission is to explore the Martian surface, collect samples, and study the pl
 It is equipped with advanced instruments and cameras to analyze the terrain and search for signs of past microbial life.
 ```
 
-In the completed solution, I've added the prompts and the config files for the other functions. You can find the completed solution [here](https://github.com/Thwani47/blog-code/tree/main/SemanticKernelExample). The updated **Program.cs** file should look like the following
+In the completed solution, I've added the prompts and the config files for the other functions. You can find the completed solution [here](https://github.com/Thwani47/blog-code/tree/main/SemanticKernelExample). The folder structure after adding all the functions looks like this
+![sk-file-structure](/images/sk_file_structure.png)
+
+
+The updated **Program.cs** file should look like the following
 ```csharp
 // ...kernel configuration
 
