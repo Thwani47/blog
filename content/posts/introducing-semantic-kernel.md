@@ -1,5 +1,5 @@
 +++
-title = "A Beginner's Guide to  Semantic Kernel"
+title = "Introducing Semantic Kernel"
 tags = [
     "ai-ml",
     "semantic-kernel"
