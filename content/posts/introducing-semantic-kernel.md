@@ -13,7 +13,7 @@ toc = true
 ![sk-architecture](/images/sk_architecture.png)
 
 
-In this article we will be introducing Semantic Kernel, covering some of the terminology used, and creating a basic C# application that uses Semantic Kernel.
+In this series of articles, we'll be exploring Semantic Kernel, unraveling its terminology, and demonstrating its capabilities by building practical applications. This article will lay the foundation of the core concepts of Semantic Kernel and will ensure we have a solid understanding of the SDK.
 
 The source code for the completed application can be found [here](https://github.com/Thwani47/blog-code/tree/main/SemanticKernelExample).
 
@@ -48,7 +48,7 @@ Let's get started with Semantic Kernel below
 To get started, you'll need an OpenAI API Key. You can obtain one by either creating an [OpenAI](https://openai.com/api/) account or creating an [Azure OpenAI Service](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quickstart?pivots=programming-language-studio). At the time of writing, access to the Azure OpenAI Service is only available by application. You can fill out your application [here](https://aka.ms/oai/access). 
 
 **Note:
-You'll have to load some credits in order to be able to use the OpenAI models. You can load that on the [OpenAI billing page](https://platform.openai.com/account/billing/overview)**
+You'll have to load some credits to be able to use the OpenAI models. You can load that on the [OpenAI billing page](https://platform.openai.com/account/billing/overview)**
 
 We'll build a C# console application that accepts a user's ask and can perform a set of actions. The application should be able to
 - Summarize a piece of text
