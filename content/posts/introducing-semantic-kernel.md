@@ -65,10 +65,10 @@ $ cd SemanticKernelExample
 ```
 We then have to install a few Nuget packages
 ```bash
-$ dotnet add package Microsoft.SemanticKernel --prerelease
+$ dotnet add package Microsoft.SemanticKernel --version 0.21.230828.2-preview
 $ dotnet add package Microsoft.Extensions.Configuration.UserSecrets
 ```
-*[Semantic Kernel](https://www.nuget.org/packages/Microsoft.SemanticKernel/) is still in preview at the time of writing this article, so we have to add the `--prerelease` flag to install the package.*
+*[Semantic Kernel](https://www.nuget.org/packages/Microsoft.SemanticKernel/) is still in preview at the time of writing this article, so we install the preview version.*
 
 Define an app secret with your API Key using the command
 ```bash
@@ -83,8 +83,10 @@ var kernel = KernelBuilder.Create();
 ```
 Two, by using the `KernelBuilder.Build()` method if we want to set extra configuration for the kernel such as loading the initial plugins, adding custom loggers, etc.
 ```csharp
-var logger = NullLogger.Instance;
-var kernel = new KernelBuilder().WithLogger(logger).Build();
+var loggerFactory = NullLoggerFactory.Instance;
+var kernel = new KernelBuilder()
+    .WithLoggerFactory(loggerFactory)
+    .Build();
 ```
 
 For the **text summarization** functionality, we'll create a semantic function that will summarize an input text. We'll call this function **SummarizeText**. In your project root directory, create a **Plugins** folder, and inside that folder create a **WriterPlugin** folder. Inside the **WriterPlugin** folder, create a **SummarizeText** folder. Inside the **SummarizeText** folder create two files, **skprompt.txt** and **config.json**. The **skprompt.txt** file will contain the prompt that will be sent to the AI model, and the **config.json** file will contain the configuration for the function. The **skprompt.txt** file should contain the following text:
