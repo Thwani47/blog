@@ -4,6 +4,7 @@ defaultContentLanguage = "en"
 title = "Thwani Sithole"
 theme = "hermit"
 enableEmoji = true
+googleAnalytics = "G-LD06J0QZFE"
 
 [author]
 name = "Thwani Sithole"

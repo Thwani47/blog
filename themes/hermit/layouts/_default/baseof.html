@@ -2,6 +2,15 @@
 <html lang="{{.Site.LanguageCode}}">
 
 <head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-LD06J0QZFE"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-LD06J0QZFE');
+	</script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -30,7 +39,6 @@
 	{{ partial "extra-head.html" . }}
 	{{- end }}
 </head>
-
 <body id="page">
 	{{ block "header" . -}}{{ end -}}
 	{{ block "main" . -}}{{ end -}}
