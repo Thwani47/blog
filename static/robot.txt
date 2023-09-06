@@ -1,0 +1,29 @@
+User-agent: *
+Disallow: /private/
+Disallow: /admin/
+Disallow: /config/
+Disallow: /layouts/
+Disallow: /static/
+Disallow: /themes/
+Disallow: /tags/
+Disallow: /categories/
+Disallow: /archives/
+Disallow: /404/
+Disallow: /search/
+Disallow: /404.html
+Disallow: /sitemap.xml
+
+# Allow Googlebot to crawl everything
+User-agent: Googlebot
+Allow: /
+
+# Allow Bingbot to crawl everything
+User-agent: Bingbot
+Allow: /
+
+# You can add specific rules for other search engines if needed
+# User-agent: SomeOtherBot
+# Disallow: /
+
+# Sitemap location
+Sitemap: https://thwanisithole.co.za/sitemap.xml
