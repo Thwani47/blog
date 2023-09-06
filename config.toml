@@ -19,9 +19,9 @@ dateform = "Jan 2, 2006"
 dateformShort = "Jan 2"
 dateformNum = "2006-01-02"
 dateformNumTime = "2006-01-02 15:04 -0700"
+description = "thwanisithole.co.za | Thwani Sithole's personal website"
 
 themeColor = "#494f5c"
-
 homeSubtitle = "I'm a full stack software developer from Durban, South Africa"
 
 
