@@ -2,7 +2,7 @@
 title = "Deep Dive Into .NET Minimal APIs"
 tags = [
     "dotnet",
-    "c#",
+    "c-sharp",
     "api"
 ]
 date = "2022-09-20"
