@@ -36,3 +36,6 @@ other = "Menu"
 
 [featuredImage]
 other = "Featured Image"
+
+[pageViews]
+other = "Views"
