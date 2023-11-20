@@ -10,7 +10,7 @@ date = "2023-11-20"
 toc = true
 +++
 
-I was working on a CLI tool written in Go, using the [Cobra](https://github.com/spf13/cobra) tool, and I had a use case where I needed a nested prompt for one of the commands. I was using [promptui](https://github.com/manifoldco/promptui) for the prompts and I couldn't find a straightforward way to do this. This short post will show how to create a nested prompt using `promptui`. The completed code can be found [here](https://addlinktorepo).
+I was working on a CLI tool written in Go, using the [Cobra](https://github.com/spf13/cobra) tool, and I had a use case where I needed a nested prompt for one of the commands. I was using [promptui](https://github.com/manifoldco/promptui) for the prompts and I couldn't find a straightforward way to do this. This short post will show how to create a nested prompt using `promptui`. The completed code can be found [here](https://github.com/Thwani47/nested-prompt).
 
 We first need to create an empty repo and use `cobra-cli` to create a new CLI application. We will call it `nested-prompt`:
 
