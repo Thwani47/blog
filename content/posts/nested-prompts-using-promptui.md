@@ -26,7 +26,7 @@ $ go install github.com/spf13/cobra-cli@latest
 $ go get -u github.com/manifoldco/promptui
 ```
 
-We can initialize a new CLI using the `cobra-cli` and a command to our CLI 
+We can initialize a new CLI application using the `cobra-cli` and add a command to our CLI 
     
 ```bash
 $ cobra-cli init            # initializes a new CLI application
