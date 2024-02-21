@@ -13,7 +13,7 @@ toc = true
 ![sk-architecture](/images/sk_architecture.png)
 
 
-In this series of articles, we'll be exploring Semantic Kernel, unraveling its terminology, and demonstrating its capabilities by building practical applications. This article will lay the foundation of the core concepts of Semantic Kernel and will ensure we have a solid understanding of the SDK.
+In this article, we'll be exploring Semantic Kernel, unraveling its terminology, and demonstrating its capabilities by building practical applications. This article will lay the foundation of the core concepts of Semantic Kernel and will ensure we have a solid understanding of the SDK.
 
 The source code for the completed application can be found [here](https://github.com/Thwani47/blog-code/tree/main/SemanticKernelExample).
 
