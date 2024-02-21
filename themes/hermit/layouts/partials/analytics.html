@@ -1,5 +1,8 @@
 {{ template "_internal/google_analytics_async.html" . }}
-
+<script>
+if (window.location.host !== 'thwanisithole.co.za')
+        window.goatcounter = {no_onload: true}
+</script>
 <script
 	id="partials/pageviews.html"
 	data-goatcounter="https://thwani.goatcounter.com/count"
