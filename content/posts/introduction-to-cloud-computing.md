@@ -31,17 +31,17 @@ When organizations think of their IT infrastructure models, they usually conside
     - If the organization underestimates, they end up with insufficient resources, which can lead to poor performance and unhappy customers.
 - **Operational Expenditure (OpEx)**: This is the ongoing cost to run and maintain the infrastructure. 
 
-Since cloud computing allows customers to use resources on a pay-as-you-go basis, it eliminates the need for CapEx. This means that organizations can avoid the upfront cost of purchasing hardware and software. Instead, they can pay for what they use and scale up or down as needed. This results in cost savings for the organization. Organizations also don't have to pay for the physical instruction, the electricity, and the cooling required to run the infrastructure.
+Since cloud computing allows customers to use resources on a pay-as-you-go basis, it eliminates the need for CapEx. This means that organizations can avoid the upfront cost of purchasing hardware and software. Instead, they can pay for what they use and scale up or down as needed. This results in cost savings for the organization. Organizations also don't have to pay for the physical infrastructure, the electricity, and the cooling required to run the infrastructure.
 
  ### <u>Uptime (Availability)</u>
- Availability refers to organizations' services and products being available to customers they they need them.
+ Availability refers to organizations' services and products being available to customers when they need them.
 
 Cloud providers offer **Service Level Agreements (SLAs)** that guarantee a certain level of uptime. This means that the cloud provider guarantees that the services will be available for a certain percentage of time. For example, a cloud provider might offer an SLA that guarantees 99.9% uptime. This means that the services will be available 99.9% of the time. This is a huge benefit for organizations that need their services to be available 24/7. Azure is a highly available cloud platform with availability guarantees for most of its services.
 
  ### <u>Scalability</u>
 Scalability refers to the ability to adjust computing resources to meet demand. When the demand is high, the organization can add more computing power or more resources to meet demand, and when the demand is low, the organization can scale down to save costs. Cloud computing allows organizations to scale both vertically and horizontally.
 - **Vertical Scaling**: This refers to adding more resources to a single server. For example, adding more RAM, CPU, or storage to a single server (**Scaling up**), or removing excess resources from a single server (**Scaling down**).
-- **Horizontal Scaling**: This refers to adding more servers to the infrastructure (**Scaling out**), or removing unutilised servers from the infrastructure (**Scaling in**).
+- **Horizontal Scaling**: This refers to adding more servers to the infrastructure (**Scaling out**), or removing unutilized servers from the infrastructure (**Scaling in**).
 
  ### <u>Reliability</u>
 Reliability refers to the ability of the cloud provider to deliver the services as promised. Cloud providers have multiple data centers in different geographical locations. This means that if one data center goes down, the services can be moved to another data center. This ensures that the services are always available. Organizations have the confidence that their services can recover from failures and continue being available to their customers
@@ -61,9 +61,9 @@ When organizations are setting up their services on the cloud, they can also cho
 # Types of Cloud Services
 | <div style="width:200px">Cloud Service</div> | Functionality |
 |------------------|----------------|
-| Infrastructure as a Service (IaaS) | IaaS provides virtualized computing resources over the internet. Organizations can rent out a wide range of services such as virtual machines, storage, and networking|
-| Platform as a Service (PaaS) | PaaS provides a platform that allows customers to develop, run, and manage applications without the complexity of building and maintaining the infrastructure.|
-| Software as a Service (SaaS) | SaaS provides software applications over the internet. Customers can access the software applications via a web browser or an app|
+| Infrastructure as a Service (IaaS) | IaaS provides virtualized computing resources over the internet. Organizations can rent out a wide range of services such as virtual machines, storage, and networking<br/><br/>With IaaS, the cloud provider is responsible for maintaining the hardware, the network connectivity to the internet, and the physical security of the hardware. The customer is responsible for the operating system installed on the virtual machines, the configuration, the maintenance, and so on. |
+| Platform as a Service (PaaS) | PaaS provides a platform that allows customers to develop, run, and manage applications without the complexity of building and maintaining the infrastructure.<br/><br/>With PaaS, the cloud provider provides ready-to-use platforms that contain most of the tools that developers use. The cloud service provider is responsible for maintaining the hardware, the network connectivity to the internet, and the physical security of the hardware. The cloud service provider is also responsible for the operating system, the development tools, and so on. The customer is only responsible for the services that run on these platforms|
+| Software as a Service (SaaS) | SaaS provides fully developed software applications over the internet. Customers can access the software applications via a web browser or an app. Email such as Outlook, cloud file storage solutions such as DropBox, workflow management solutions such as Trello, and so on are examples of SaaS applications. <br/><br/>With SaaS, the cloud provider is responsible for maintaining the provided application. The customer is only responsible for the data and the configuration of the application.|
 
 As organizations continue to move their services to the cloud, it is crucial to understand the **shared responsibility model**. The shared responsibility model dictates that the cloud service provider is responsible for monitoring and responding to security threats to the cloud infrastructure, while the customer is responsible for securing the data and applications that they host on the cloud. This means that the customer is responsible for securing their data and applications, while the cloud provider is responsible for securing the infrastructure that the data and applications are hosted on.
 
