@@ -44,7 +44,7 @@ The control plane runs the components that are responsible for managing the clus
 The worker nodes provide a running environment for the applications. The worker nodes run the following components:
 - **Kubelet**: The kubelet is an agent that runs on each node in the cluster. The kubelet is responsible for making sure that containers are running in a pod. Each node communicates with the control plane using the kubelet to inform the control plane about any changes in the node.
 - **kube-proxy**: The kube-proxy is a network agent that runs on each node, responsible for dynamic updates and maintenance of all network rules on the node. It handles the routing of network traffic in a Kubernetes cluster.
-- ** Container Runtime**: K8s cannot directly run containers. It needs a container runtime to run the containers on the node where a pod is scheduled. K8s supports container runtimes such as Docker, containerd, CRI-O, etc.
+- **Container Runtime**: K8s cannot directly run containers. It needs a container runtime to run the containers on the node where a pod is scheduled. K8s supports container runtimes such as Docker, containerd, CRI-O, etc.
 
 A **pod** is the smallest deployable unit in Kubernetes. A pod is a group of one or more containers that share the same network and storage. Pods are the atomic unit on the Kubernetes platform. Pods are scheduled on worker nodes by the control plane.
 
