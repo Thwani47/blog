@@ -24,7 +24,7 @@ The easiest way to run a Kubernetes cluster is to install [Docker Desktop](https
 
 Another way to run a Kubernetes cluster is to use [Minikube](https://minikube.sigs.k8s.io/docs/start/). Minikube is a tool that allows you to run a single-node Kubernetes cluster on your local machine. Minikube can be installed on Windows, macOS, and Linux. To install Minikube, follow the instructions [here](https://minikube.sigs.k8s.io/docs/start/). In this blog post, we will be using Docker Desktop to run our Kubernetes cluster.
 
-*On Windows and macOS, Docker Desktop comes with `kubectl`, a command-line tool we use to interact with the Kubernetes cluster. If you prefer installing `kubectl` on your own, tnstructions on how to do that can be found [here](https://kubernetes.io/docs/tasks/tools/).*
+*On Windows and macOS, Docker Desktop comes with `kubectl`, a command-line tool we use to interact with the Kubernetes cluster. If you prefer installing `kubectl` on your own, instructions on how to do that can be found [here](https://kubernetes.io/docs/tasks/tools/).*
 
 To verify that Kubernetes is running, we can run the following command:
 ```bash
@@ -370,7 +370,7 @@ kubectl get all
 # replciaset.apps/go-subtractor-deployment-5ff5d997db      1         1         1       2m41s
 # replciaset.apps/nestjs-divider-deployment-c8dd85b56      1         1         1       3m14s
 ``` 
-We can see that our `calculator-service` is the only service that has an `EXTERNAL-IP`, which is `localhost` in this case. We can access the calculator app by navigating to `localhost:3000` in our browser and we should see the calculator app running:
+We can see that our `calculator-service` is the only service that has an `EXTERNAL-IP`, which is `localhost` in this case. We can access the calculator app by navigating to `localhost:3000` in our browser, and we should see the calculator app running:
 ![Calculator](/images/calculator-ui.png)
 
 # Conclusion
