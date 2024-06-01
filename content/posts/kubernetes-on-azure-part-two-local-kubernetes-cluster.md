@@ -39,8 +39,8 @@ This command will display the address of the Kubernetes control plane. The outpu
 ```
 When running Kubernetes locally, the cluster is run on a single node, which means the control (master) node and worker node are the same.
 
-Let's see how we can deploy resources to our cluster. I have developed a simple distributed calculator app that we will use to deploy resources to our Kubernetes cluster. The calculator app consists of the following components:
-- **calculator** - A Reaect application which is the front end of the app.
+Let's see how we can deploy resources to our cluster. I have created a simple distributed calculator app that we will use to deploy resources to our Kubernetes cluster. The calculator app consists of the following components:
+- **calculator** - A React application which is the front end of the app.
 - **go-subtractor** - A Golang API that exposes an endpoint to subtract 2 numbers
 - **csharp-adder** - A .NET API that exposes an endpoint to add 2 numbers
 - **python-multiplier** - A Flask API that exposes an endpoint to multiply 2 numbers
@@ -60,12 +60,22 @@ kubectl get pods
 # NAME         READY   STATUS             RESTARTS      AGE
 # calculator   0/1     CrashLoopBackOff   3 (25s ago)   62s
 ```
-_*The status of the Pod is CrashLoopBack because the **calculator** container needs the other containers to be running for it to work correctly, so it will keep on crashing. We'll fix that a bit later_😀
+*The status of the Pod is CrashLoopBack because the **calculator** container needs the other containers to be running for it to work correctly, so it will keep on crashing. We'll fix that a bit later*😀
 
 We can also use `kubectl describe` to get more information about the Pod such as the image used, the status, and the events that have occurred
 ```bash
 kubectl describe pod calculator
-# ...Pod information
+# Name:             calculator
+# Namespace:        default
+# Priority:         0
+# Service Account:  default
+# Node:             docker-desktop/192.168.65.3
+# Start Time:       Sat, 01 Jun 2024 11:23:21 +0200
+# Labels:           run=calculator
+# Annotations:      <none>
+# Status:           Running
+# IP:               10.1.0.126
+# ... other information
 ```
 
 we can get the logs of the Pod using the `kubectl logs` command
@@ -81,7 +91,7 @@ kubectl delete pod calculator
 # pod "calculator" deleted
 ```
 
-We can also make use of **manifest** files, which are either JSON or YAML files, which allow us to follow a declarative approach instead of the imperative approach we used above. Below is an example of a manifest file that deploys the `calculator` Pod
+We can also make use of **manifest** files, which are either JSON or YAML files, which allow us to use a declarative approach instead of the imperative approach we used above to deploy resources to our cluster. Below is an example of a manifest file that deploys the `calculator` Pod
 ```yaml
 # calculator-pod.yaml
 apiVersion: v1
@@ -91,9 +101,9 @@ metadata:
   labels:
     app: calculator
 spec:
-    containers:
- - name: calculator
-      image: ghcr.io/thwani47/calculator:v1
+  containers:
+  - name: calculator
+    image: ghcr.io/thwani47/calculator:v1
 ```
 
 We can deploy the Pod using the `kubectl apply` command
@@ -123,7 +133,7 @@ spec:
         app: calculator
     spec:
       containers:
- - name: calculator
+      - name: calculator
         image: ghcr.io/thwani47/calculator:v1
 ```
 _We add the Pod definition in the `template` section of the Replication Controller. The `replicas` field specifies the number of Pods we want to be running at all times. In this case, we want 2 Pods of the calculator app running at all times._
@@ -148,7 +158,7 @@ kubectl get pods
 # calculator-replication-controller-z4gbj   0/1     CrashLoopBackOff   4 (17s ago)   113s
 ```
 
-The Pods controlled by a `ReplicationController` are named using the format: `controller-name>-<random-string>`.
+The Pods controlled by a `ReplicationController` are named using the format: `<controller-name>-<random-string>`.
 
 We can delete one Pod and a new Pod will be created to replace it
 ```bash
@@ -183,8 +193,8 @@ spec:
                 app: calculator
         spec:
             containers:
- - name: calculator
-            image: ghcr.io/thwani47/calculator:v1
+            - name: calculator
+              image: ghcr.io/thwani47/calculator:v1
 ```
 The `selector` field helps the ReplicaSet identify the Pods that fall under it. It is a required field for the ReplicaSet but not for the Replication Controller. The ReplicaSet can also manage Pods that were created outside of it. 
 
@@ -208,7 +218,7 @@ kubectl get pods
 # pod/calculator-replicaset-x2wkb               0/1     CrashLoopBackOff   3 (20s ago)    61s
 ```
 
-Kubernetes `Deployments` allow us to upgrade our application instances, roll back to a previous version, and scale our application instances. Deployments are the recommended way to manage Pods and ReplicaSets. In the next section, we will go through how to create a Deployment for our calculator app.
+Kubernetes `Deployments` allow us to upgrade our application instances, roll back to a previous version, and scale our application instances. Deployments are the recommended way to manage Pods and ReplicaSets. In the next section, we will go through how to create a Deployment for our calculator.
 
 ## Creating a Deployment
 A `Deployment` is a higher-level abstraction that manages ReplicaSets and Pods. Deployments allow us to define the desired state of our application and Kubernetes will ensure that the actual state matches the desired state. We can define a Deployment for our calculator Pod as follows
@@ -231,7 +241,7 @@ spec:
             app: calculator
         spec:
           containers:
- - name: calculator
+          - name: calculator
             image: ghcr.io/thwani47/calculator:v1
 ```
 A Deployment automatically creates a ReplicaSet. It also creates a rollout history that allows us to roll back to a previous version of the application. We can deploy the Deployment using the `kubectl apply` command
@@ -253,7 +263,10 @@ kubectl get all
 # NAME                                               DESIRED   CURRENT   READY   AGE
 # replicaset.apps/calculator-deployment-6c6cbff8bb   2         2         0       44s
 ```
-This created a Deployment, a ReplicaSet, and Pods. We can check the status of the Deployment using the `kubectl get` command
+This created a Deployment, a ReplicaSet, and 2 Pods. We can check the status of the Deployment using the `kubectl get` command
+```bash
+kubectl get deployment calculator-deployment
+```
 
 We can also check the rollout history using the `kubectl rollout` command
 ```bash
@@ -283,9 +296,9 @@ spec:
     selector:
         app: calculator
     ports:
- - protocol: TCP
-      port: 3000
-      targetPort: 80
+    - protocol: TCP
+      port: 3000 # the port the Service will be exposed on
+      targetPort: 80 # the port the Service will forward traffic to on the Pods
     type: LoadBalancer
 ```
 We create a `LoadBalancer` Service because we want to expose our calculator app to the outside world. The Service will be exposed on port `3000` and will forward traffic to port `80` of the Pods. We can deploy the Service using the `kubectl apply` command
