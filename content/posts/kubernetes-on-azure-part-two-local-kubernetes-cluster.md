@@ -374,4 +374,4 @@ We can see that our `calculator-service` is the only service that has an `EXTERN
 ![Calculator](/images/calculator-ui.png)
 
 # Conclusion
-In this blog post, we went through how to run a local Kubernetes cluster on our machines. We went through how to deploy Pods, Replication Controllers, ReplicaSets, Deployments, and Services. We also ran a distributed calculator app on our local Kubernetes cluster. In the next blog post, we will be going through how to deploy the calculator app on an Azure Kubernetes cluster using the Azure Kubernetes Service (AKS).
+In this blog post, we covered how to run a local Kubernetes cluster on our machines. We went through how to deploy Pods, Replication Controllers, ReplicaSets, Deployments, and Services. We also ran a distributed calculator app on our local Kubernetes cluster. In the next blog post, we will be going through how to deploy the calculator app on an Azure Kubernetes cluster using the Azure Kubernetes Service (AKS).
