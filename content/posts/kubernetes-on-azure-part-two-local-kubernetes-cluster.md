@@ -22,7 +22,9 @@ In the [previous](https://thwanisithole.co.za/posts/kubernetes-on-azure-part-one
 ## Installing Kubernetes
 The easiest way to run a Kubernetes cluster is to install [Docker Desktop](https://docs.docker.com/desktop/) and enable Kubernetes. On Docker Desktop, we can enable Kubernetes by going to the Docker Desktop settings, clicking on the Kubernetes tab on the left side, and checking the box to enable Kubernetes. Click on the Apply & Restart button to apply the changes.
 
-*On Windows and macOS, Docker Desktop comes with `kubectl`, a command-line tool we use to interact with the Kubernetes cluster. Instructions on how to install `kubectl` can be found [here](https://kubernetes.io/docs/tasks/tools/).*
+Another way to run a Kubernetes cluster is to use [Minikube](https://minikube.sigs.k8s.io/docs/start/). Minikube is a tool that allows you to run a single-node Kubernetes cluster on your local machine. Minikube can be installed on Windows, macOS, and Linux. To install Minikube, follow the instructions [here](https://minikube.sigs.k8s.io/docs/start/). In this blog post, we will be using Docker Desktop to run our Kubernetes cluster.
+
+*On Windows and macOS, Docker Desktop comes with `kubectl`, a command-line tool we use to interact with the Kubernetes cluster. If you prefer installing `kubectl` on your own, tnstructions on how to do that can be found [here](https://kubernetes.io/docs/tasks/tools/).*
 
 To verify that Kubernetes is running, we can run the following command:
 ```bash
@@ -30,10 +32,10 @@ kubectl cluster-info
 ```
 This command will display the address of the Kubernetes control plane. The output should look something like this:
 ```bash
-Kubernetes control plane is running at https://kubernetes.docker.internal:6443
-CoreDNS is running at https://kubernetes.docker.internal:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+# Kubernetes control plane is running at https://kubernetes.docker.internal:6443
+# CoreDNS is running at https://kubernetes.docker.internal:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
 
-To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+# To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 ```
 When running Kubernetes locally, the cluster is run on a single node, which means the control (master) node and worker node are the same.
 
