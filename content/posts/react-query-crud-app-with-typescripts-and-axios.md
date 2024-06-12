@@ -475,7 +475,7 @@ export default function EditTodo() {
 
 We then add the component to our router in `main.tsx` as follows
 ```typescript
-import AddTodo from './AddTodo';
+import EditTodo from './EditTodo';
 // ...
 
 const router = createBrowserRouter([
