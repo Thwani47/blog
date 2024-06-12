@@ -21,7 +21,7 @@ The complete source code for this article can be found [here](https://github.com
 5. [Summary](#summary)
 
 ## Overview of .NET Minimal APIs
-Minimal APIs are designed to create web APIs with minimal dependencies. Minimal APIs are an ideal way for creating microservices and lightweight applications that include the minimum files, configuration, and dependencies required to build a functional API. Minimal APIs allow us to create an API with very few lines of code. We can get create an API with the following lines of code
+Minimal APIs are designed to create web APIs with minimal dependencies. Minimal APIs are an ideal way for creating microservices and lightweight applications that include the minimum files, configuration, and dependencies required to build a functional API. Minimal APIs allow us to create an API with very few lines of code. We can create an API with the following lines of code
 ```csharp
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
