@@ -23,15 +23,16 @@ In this article, we will be learning how to use React Query to fetch and update 
 The complete source code for this article can be found [here](https://github.com/Thwani47/blog-code/tree/main/react-query-crud-example)
 
 # Table of Contents
-- [Creating the project](#creating-the-project)
-- [Setting up the backend server](#setting-up-the-backend-server)
-- [Setting up React Query](#setting-up-react-query)
-- [Setting up Axios](#setting-up-axios)
-- [Fetch all Todos](fetch-all-todos)
-- [Add a new Todo](#add-a-new-todo)
-- [Delete a Todo](#delete-a-todo)
-- [Edit a Todo](#edit-a-todo)
-- [Conclusion](#conclusion)
+- [Table of Contents](#table-of-contents)
+  - [Creating the project](#creating-the-project)
+  - [Setting up the backend server](#setting-up-the-backend-server)
+  - [Setting up React Query](#setting-up-react-query)
+  - [Setting up Axios](#setting-up-axios)
+  - [Fetch all Todos](#fetch-all-todos)
+  - [Add a new Todo](#add-a-new-todo)
+  - [Delete a Todo](#delete-a-todo)
+  - [Edit a Todo](#edit-a-todo)
+  - [Conclusion](#conclusion)
 
 
 

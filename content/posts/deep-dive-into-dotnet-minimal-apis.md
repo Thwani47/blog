@@ -2,7 +2,7 @@
 title = "Deep Dive Into .NET Minimal APIs"
 tags = [
     "dotnet",
-    "c-sharp",
+    "csharp",
     "api"
 ]
 date = "2022-09-20"
@@ -14,11 +14,12 @@ The release of .NET 6 introduced *minimal APIs*, which allows us to develop smal
 The complete source code for this article can be found [here](https://github.com/Thwani47/blog-code/tree/main/MinimalApiExample).
 
 # Table of Contents
-1. [Overview of .NET Minimal APIs](#overview-of-net-minimal-apis)
-2. [Creating a Minimal API](#creating-a-minimal-api)
-3. [Configuring a Minimal API](#configuring-a-minimal-api)
-4. [CRUD methods in a Minimal API](#crud-methods-in-a-minimal-api)
-5. [Summary](#summary)
+- [Table of Contents](#table-of-contents)
+  - [Overview of .NET Minimal APIs](#overview-of-net-minimal-apis)
+  - [Creating a minimal API](#creating-a-minimal-api)
+  - [Configuring a Minimal API](#configuring-a-minimal-api)
+  - [CRUD methods in a Minimal API](#crud-methods-in-a-minimal-api)
+  - [Summary](#summary)
 
 ## Overview of .NET Minimal APIs
 Minimal APIs are designed to create web APIs with minimal dependencies. Minimal APIs are an ideal way for creating microservices and lightweight applications that include the minimum files, configuration, and dependencies required to build a functional API. Minimal APIs allow us to create an API with very few lines of code. We can create an API with the following lines of code
